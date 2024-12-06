@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    
+    <h3>Sensor Data:</h3>
+    <ul>
+        {% for value in sensor_data %}
+        <li>{{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Sensor Data Graph:</h3>
+    <img src="data:image/png;base64,{{ graph_url }}" alt="Sensor Data Graph">
+
+    <br><br>
+    <a href="/">Go Back to Upload</a>
+</body>
+</html>
